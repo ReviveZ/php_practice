@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+body{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Adobe 仿宋 Std R",sans-serif;
+    background:#DFE9F9;
+
+
+}
+.wrapper{
+    margin: 100px auto 0;
+    width: 400px;
+}
+.bp1{
+    margin: 70px auto 0;
+    padding-bottom: 10px;
+    width: 400px;
+    top:250px;
+    height:600px;
+    overflow: hidden;
+    opacity: 1;
+    left: 0%;
+
+}
+.wrapper h1,.bp1 h1{
+    font-family: 华文细黑,sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.border{
+    box-shadow:1px 2px 3px  #ccc;
+    border-color: #eee;
+    border-width: 1px;
+    border-style: solid;
+    background:#ffffff;
+    padding: 0 10px 20px;
+}
+.style{
+    margin: 20px auto 0;
+    width: 350px;
+}
+.items{
+    line-height: 30px;
+    margin: 5px;
+    list-style: none;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+input{
+    margin: 2px;
+    border-color: #e6e6e6;
+    border-width: 1px;
+    border-style: solid;
+    background:#ffffff;
+    padding: 3px;
+    height: 30px;
+    font-size: 30px;
+    font-family: BrowalliaUPC,sans-serif;
+    color: #5d5d5d;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    width: 328px;
+}
+input:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82, 168, 236, 0.6);
+    background: #f8f8f8;
+}
+.sublimt{
+    height: 40px;
+    width: 335px;
+    display: block;
+    padding:5px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.25);
+    vertical-align: middle;
+    cursor:pointer;
+    background: linear-gradient(to bottom,#0088cc,#0044cc);
+    border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-radius:6px;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+
+}
+.sublimt:link,.sublimt:visited,.sublimt:hover,.sublimt:active{
+    color:white;
+    background:linear-gradient(to bottom,#0044cc,#0A0ECC);
+}
+.copyright{
+    margin-top: 20px;
+    text-align: center;
+}
+.bottom{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.copyright a:link,.copyright a:visited{
+    color:#f90;
+}
+.copyright a:hover{
+    color: #FF4000;
+}
+.copyright a:active{
+    color:#f90;
+
+}
+.password_icon{
+    width: 156px;
+}

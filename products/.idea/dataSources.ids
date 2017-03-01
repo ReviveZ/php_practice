@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ProCon29@localhost" uuid="7f177149-e4cf-4ee6-bd64-df490f039562">
+    <database-info product="MySQL" version="5.6.25" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.2">
+      <schema id="1" name="procon29"/>
+      <table id="2" parent="1" name="products29"/>
+      <table id="3" parent="1" name="user29"/>
+      <table id="4" parent="1" name="comment29"/>
+      <table id="5" parent="1" name="group29"/>
+      <table id="6" parent="1" name="message29"/>
+      <table id="7" parent="1" name="notice29"/>
+      <table id="8" parent="1" name="order29"/>
+      <table id="9" parent="1" name="usernor29"/>
+      <column id="10" parent="2" name="prod_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="11" parent="2" name="prod_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="12" parent="2" name="prod_sale">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="13" parent="2" name="prod_cost">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="14" parent="2" name="prod_profit">
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="15" parent="2" name="prod_num">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="2" name="prod_mold">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;正常&apos;</default-expression>
+      </column>
+      <column id="17" parent="2" name="prod_status">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;up&apos;</default-expression>
+      </column>
+      <column id="18" parent="2" name="prod_sale_mon">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="19" parent="2" name="prod_sale_year">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="20" parent="2" name="prod_in_time">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="21" parent="2" name="prod_introduce">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;无&apos;</default-expression>
+      </column>
+      <column id="22" parent="2" name="prod_updata_time">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="23" parent="2" name="prod_peo">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="24" parent="2" name="PRIMARY">
+        <columns>prod_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="25" parent="3" name="u_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="26" parent="3" name="u_passwd">
+        <mandatory>1</mandatory>
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="27" parent="3" name="u_name">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;无&apos;</default-expression>
+      </column>
+      <column id="28" parent="3" name="u_ident">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="29" parent="3" name="u_status">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;down&apos;</default-expression>
+      </column>
+      <column id="30" parent="3" name="u_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="31" parent="3" name="u_create">
+        <data-type>date</data-type>
+      </column>
+      <column id="32" parent="3" name="u_update_time">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="33" parent="3" name="PRIMARY">
+        <columns>u_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="34" parent="4" name="c_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="c_user">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="36" parent="4" name="c_prod">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="37" parent="4" name="c_status">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;未回复&apos;</default-expression>
+      </column>
+      <column id="38" parent="4" name="c_answer">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="39" parent="4" name="c_reply1">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="40" parent="4" name="c_create">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="41" parent="4" name="c_update">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="42" parent="4" name="c_op">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="43" parent="4" name="PRIMARY">
+        <columns>c_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="44" parent="5" name="g_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="45" parent="5" name="g_sale">
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="46" parent="5" name="g_name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="47" parent="5" name="g_p1">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="48" parent="5" name="g_p2">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="49" parent="5" name="g_p3">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="50" parent="5" name="g_p4">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="51" parent="5" name="g_n1">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="52" parent="5" name="g_n2">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="53" parent="5" name="g_n3">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="54" parent="5" name="g_n4">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="55" parent="5" name="g_status">
+        <data-type>varchar(8)</data-type>
+        <default-expression>&apos;up&apos;</default-expression>
+      </column>
+      <column id="56" parent="5" name="g_sale_mon">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="57" parent="5" name="g_sale_year">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="58" parent="5" name="g_create">
+        <data-type>date</data-type>
+      </column>
+      <column id="59" parent="5" name="g_op">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="60" parent="5" name="PRIMARY">
+        <columns>g_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="61" parent="6" name="m_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="62" parent="6" name="m_status">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;未回复&apos;</default-expression>
+      </column>
+      <column id="63" parent="6" name="m_answer">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="64" parent="6" name="m_reply1">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="65" parent="6" name="m_op">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="66" parent="6" name="m_create">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="67" parent="6" name="m_update">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="68" parent="6" name="PRIMARY">
+        <columns>m_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="69" parent="7" name="n_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="70" parent="7" name="n_state">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="71" parent="7" name="n_content">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="72" parent="7" name="n_op">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="73" parent="7" name="n_create">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="74" parent="7" name="PRIMARY">
+        <columns>n_name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="8" name="o_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="o_user">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="77" parent="8" name="o_prod">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="78" parent="8" name="o_state">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="79" parent="8" name="o_sale">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="80" parent="8" name="o_num">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="81" parent="8" name="o_op">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="82" parent="8" name="o_create">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="83" parent="8" name="PRIMARY">
+        <columns>o_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="84" parent="9" name="u_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="85" parent="9" name="u_passwd">
+        <mandatory>1</mandatory>
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="86" parent="9" name="u_name">
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;无&apos;</default-expression>
+      </column>
+      <column id="87" parent="9" name="u_status">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;down&apos;</default-expression>
+      </column>
+      <column id="88" parent="9" name="u_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="89" parent="9" name="u_sex">
+        <data-type>char(4)</data-type>
+        <default-expression>&apos;男&apos;</default-expression>
+      </column>
+      <column id="90" parent="9" name="u_cost">
+        <data-type>decimal(10,2)</data-type>
+        <default-expression>&apos;0.00&apos;</default-expression>
+      </column>
+      <column id="91" parent="9" name="u_birth">
+        <data-type>date</data-type>
+      </column>
+      <column id="92" parent="9" name="u_create">
+        <data-type>date</data-type>
+      </column>
+      <column id="93" parent="9" name="u_update_time">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="94" parent="9" name="PRIMARY">
+        <columns>u_id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

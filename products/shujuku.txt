@@ -1,0 +1,106 @@
+商品表
+CREATE TABLE products29(
+prod_id varchar(20) primary key,
+prod_name varchar(60) not NULL,
+prod_sale decimal(10,2) not NULL,
+prod_cost decimal(10,2) not NULL,
+prod_profit decimal(10,2) default 0,
+prod_num int not NULL,
+prod_mold varchar(10) default '正常',
+prod_status varchar(10) default 'up',
+prod_sale_mon int default 0,
+prod_sale_year int default 0,
+prod_in_time date not NULL,
+prod_img varchar(100) default "无",
+prod_introduce varchar(100) default "无",
+prod_updata_time datetime,
+prod_peo varchar(20) references  user29(u_id)
+);
+//管理员表
+create table user29(
+u_id varchar(20) primary key,
+u_passwd char(32) not NULL,
+u_name varchar(20) default "无",
+u_ident varchar(10),
+u_status varchar(10) default "down",
+u_contact varchar(30) not NULL,
+u_create date,
+u_update_time datetime
+);
+
+create table userNor29(
+u_id varchar(20) primary key,
+u_passwd char(32) not NULL,
+u_name varchar(20) default "无",
+u_status varchar(10) default "down",
+u_contact varchar(30) not NULL,
+u_sex char(4)  default "男",
+u_cost decimal(10,2) default 0,
+u_birth date,
+u_create date,
+u_update_time datetime
+);
+
+create table group29(
+g_id varchar(20) primary key,
+g_sale decimal(10,2),
+g_name varchar(20),
+g_p1 varchar(20) references products29(prod_id),
+g_p2 varchar(20) references products29(prod_id),
+g_p3 varchar(20) references products29(prod_id),
+g_p4 varchar(20) references products29(prod_id),
+g_n1 int default 0,
+g_n2 int default 0,
+g_n3 int default 0,
+g_n4 int default 0,
+g_status varchar(8) default 'up',
+g_sale_mon int default 0,
+g_sale_year int default 0,
+g_create date,
+g_op varchar(20) references user29(u_id)
+);
+
+references Course29(Cno)
+
+create table comment29(
+c_id int primary key AUTO_INCREMENT,
+c_user varchar(20) references userN29(u_id),
+c_prod varchar(20) references products29(prod_id),
+c_status varchar(10) default '未回复',
+c_answer varchar(200),
+c_reply1 varchar(200),
+c_create datetime,
+c_update datetime,
+c_op varchar(20) references user29(u_id)
+);
+
+create table message29(
+m_id int primary key AUTO_INCREMENT,
+m_status varchar(10) default '未回复',
+m_answer varchar(200),
+m_reply1 varchar(200),
+m_op varchar(20) references user29(u_id),
+m_create datetime,
+m_update datetime
+);
+
+create table notice29(
+n_name varchar(20) primary key,
+n_state varchar(8),
+n_img varchar(200),
+n_file varchar(200),
+n_content varchar(200),
+n_op varchar(20) references user29(u_id),
+n_create datetime
+);
+
+create table order29(
+o_id int primary key AUTO_INCREMENT,
+o_user varchar(20) references userNor29(u_id),
+o_prod varchar(20) references products29(prod_id),
+o_state varchar(8),
+o_sale int,
+o_num int,
+o_op varchar(20) references user29(u_id),
+o_create datetime
+);
